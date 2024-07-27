@@ -13,7 +13,7 @@ impl TryFrom<&str> for MimeType {
     type Error = crate::Error;
     fn try_from(inp: &str) -> crate::Result<Self> {
         Ok(match inp {
-            "image/jpeg" => MimeType::Jpeg,
+            "image/jpeg" | "image/jpg" => MimeType::Jpeg,
             "image/png" => MimeType::Png,
             "image/tiff" => MimeType::Tiff,
             "image/bmp" => MimeType::Bmp,
